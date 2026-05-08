@@ -1,12 +1,16 @@
+/* --- VARIABLES DE COLOR --- */
 :root {
     --bg-dark: #0A0A0A;
     --card-bg: #141414;
     --text-main: #E0E0E0;
+    --text-secondary: #bbb;
     --accent-red: #8B0000;
+    --accent-blue: #0078D7; /* Azul Blue Team */
     --accent-gold: #C5A059;
     --border-gray: #2D2D2D;
 }
 
+/* --- ESTILOS GENERALES --- */
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -58,38 +62,45 @@ h2 {
     width: 100%; 
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Apila secciones por defecto */
-    gap: 15px; /* Espacio entre header, body y footer */
+    flex-direction: column; 
+    gap: 15px; 
     transition: all 0.3s ease;
+    position: relative;
 }
 
+/* --- LÓGICA DE EQUIPOS (HOVER Y COLORES) --- */
 
-/* --- COLORES EXTRA --- */
-:root {
-    --accent-blue: #0078D7; /* Azul Blue Team */
+/* Por defecto (Si no tiene clase específica) */
+.proyecto-card:hover {
+    border-color: var(--border-gray);
+    transform: translateY(-2px);
 }
 
-/* --- CLASE RED TEAM (Rojo) --- */
-.red-team:hover {
+/* RED TEAM */
+.proyecto-card.red-team:hover {
     border-color: var(--accent-red) !important;
     box-shadow: 0 0 15px rgba(139, 0, 0, 0.4) !important;
 }
 
 .red-team .category-tag {
     color: var(--accent-red);
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
-/* --- CLASE BLUE TEAM (Azul) --- */
-.blue-team:hover {
+/* BLUE TEAM */
+.proyecto-card.blue-team:hover {
     border-color: var(--accent-blue) !important;
     box-shadow: 0 0 15px rgba(0, 120, 215, 0.4) !important;
 }
 
 .blue-team .category-tag {
     color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
-/* Organización Interna */
+/* --- ORGANIZACIÓN INTERNA --- */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -103,7 +114,7 @@ h2 {
 
 .card-body p {
     margin: 0;
-    color: #bbb;
+    color: var(--text-secondary);
 }
 
 .card-footer {
