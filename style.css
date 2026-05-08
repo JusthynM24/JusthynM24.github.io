@@ -1,37 +1,75 @@
+:root {
+    --bg-dark: #0A0A0A;
+    --card-bg: #141414;
+    --text-main: #E0E0E0;
+    --accent-red: #8B0000;
+    --accent-gold: #C5A059;
+    --border-gray: #2D2D2D;
+}
+
 body {
-    background-color: #0A0A0A;
-    color: ##E0E0E0; /* Verde neón */
-    font-family: 'Courier New', Courier, monospace;
-    padding: 5% 10%;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
     line-height: 1.6;
 }
 
-header {
-    border-bottom: 1px solid #8B0000;
-    margin-bottom: 20px;
+main {
+    max-width: 900px;
+    width: 100%;
+    padding: 80px 20px;
+}
+
+/* Títulos con el prompt en rojo */
+h1, h2 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 h1::before {
     content: "> ";
-}
-
-nav a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #2D2D2D;
-    background-color: #00ff41;
-}
-
-section {
-    margin-top: 40px;
+    color: var(--accent-red);
 }
 
 h2 {
-    color: #ffffff;
-    border-left: 5px solid #00ff41;
-    padding-left: 10px;
+    border-bottom: 1px solid var(--border-gray);
+    padding-bottom: 10px;
+    margin-top: 60px;
+    color: var(--text-main);
+}
+
+/* Tarjetas de Proyectos modernas */
+.proyecto-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-gray);
+    border-radius: 4px; /* Bordes menos redondeados = más serio */
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* El toque dorado para enlaces o botones */
+.btn-gold {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid var(--accent-gold);
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
 }
