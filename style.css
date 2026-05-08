@@ -22,27 +22,15 @@ main {
     width: 100%;
     padding: 60px 20px;
     display: flex;
-    flex-direction: column; /* Esto pone todo uno debajo de otro */
-    gap: 40px; /* Espacio entre secciones */
+    flex-direction: column; 
+    gap: 40px; 
 }
 
 section {
-    width: 100%; /* Que ocupen todo el ancho disponible */
-}
-
-/* Ajuste para que las tarjetas no se estiren de forma rara */
-.proyecto-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-gray);
-    border-radius: 4px;
-    padding: 30px;
-    margin-top: 20px;
     width: 100%; 
-    box-sizing: border-box; /* Para que el padding no rompa el ancho */
-    transition: all 0.3s ease;
 }
 
-/* Títulos con el prompt en rojo */
+/* --- TÍTULOS --- */
 h1, h2 {
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -56,17 +44,22 @@ h1::before {
 h2 {
     border-bottom: 1px solid var(--border-gray);
     padding-bottom: 10px;
-    margin-top: 60px;
+    margin-top: 20px;
     color: var(--text-main);
 }
 
-/* Tarjetas de Proyectos modernas */
+/* --- ESTRUCTURA DE LA TARJETA --- */
 .proyecto-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-gray);
-    border-radius: 4px; /* Bordes menos redondeados = más serio */
+    border-radius: 4px;
     padding: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Apila secciones por defecto */
+    gap: 15px; /* Espacio entre header, body y footer */
     transition: all 0.3s ease;
 }
 
@@ -76,11 +69,37 @@ h2 {
     transform: translateY(-2px);
 }
 
-/* El toque dorado para enlaces o botones */
+/* Organización Interna */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    color: #fff;
+}
+
+.card-body p {
+    margin: 0;
+    color: #bbb;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    margin-top: 5px;
+}
+
+/* --- COMPONENTES --- */
 .btn-gold {
     color: var(--accent-gold);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
     border: 1px solid var(--accent-gold);
@@ -91,4 +110,10 @@ h2 {
 .btn-gold:hover {
     background-color: var(--accent-gold);
     color: var(--bg-dark);
+}
+
+.project-date {
+    font-size: 0.8rem;
+    color: #555;
+    font-family: monospace;
 }
