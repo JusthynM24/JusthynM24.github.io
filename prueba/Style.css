@@ -1,0 +1,8 @@
+body {
+    background-color: #0d1117; /* Oscuro GitHub */
+    color: #00ff41; /* Verde Matrix/Terminal */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px;
+}
+a { color: #58a6ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
