@@ -1,13 +1,13 @@
 body {
-    background-color: white;
-    color: #00ff41; /* Verde neón */
+    background-color: #0A0A0A;
+    color: ##E0E0E0; /* Verde neón */
     font-family: 'Courier New', Courier, monospace;
     padding: 5% 10%;
     line-height: 1.6;
 }
 
 header {
-    border-bottom: 1px solid #00ff41;
+    border-bottom: 1px solid #8B0000;
     margin-bottom: 20px;
 }
 
@@ -22,7 +22,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #2D2D2D;
     background-color: #00ff41;
 }
 
