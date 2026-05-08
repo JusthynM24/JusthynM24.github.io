@@ -63,10 +63,30 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.proyecto-card:hover {
-    border-color: var(--accent-red);
-    box-shadow: 0 0 15px rgba(139, 0, 0, 0.2);
-    transform: translateY(-2px);
+
+/* --- COLORES EXTRA --- */
+:root {
+    --accent-blue: #0078D7; /* Azul Blue Team */
+}
+
+/* --- CLASE RED TEAM (Rojo) --- */
+.red-team:hover {
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.4) !important;
+}
+
+.red-team .category-tag {
+    color: var(--accent-red);
+}
+
+/* --- CLASE BLUE TEAM (Azul) --- */
+.blue-team:hover {
+    border-color: var(--accent-blue) !important;
+    box-shadow: 0 0 15px rgba(0, 120, 215, 0.4) !important;
+}
+
+.blue-team .category-tag {
+    color: var(--accent-blue);
 }
 
 /* Organización Interna */
