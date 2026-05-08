@@ -1,19 +1,38 @@
+/* Estilo Terminal Dark */
 body {
-    background-color: #0d1117; /* Fondo oscuro de GitHub */
-    color: #00ff41; /* Verde neón clásico */
-    font-family: 'Fira Code', 'Courier New', monospace;
+    background-color: #0d1117;
+    color: #00ff41; /* Verde neón */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5% 10%;
     line-height: 1.6;
-    padding: 20px;
+}
+
+header {
+    border-bottom: 1px solid #00ff41;
+    margin-bottom: 20px;
 }
 
 h1::before {
-    content: "> "; /* Añade el prompt de terminal antes del título */
+    content: "> ";
 }
 
-.card {
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #161b22;
+nav a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #00ff41;
+}
+
+section {
+    margin-top: 40px;
+}
+
+h2 {
+    color: #ffffff;
+    border-left: 5px solid #00ff41;
+    padding-left: 10px;
 }
