@@ -1,8 +1,19 @@
 body {
-    background-color: #0d1117; /* Oscuro GitHub */
-    color: #00ff41; /* Verde Matrix/Terminal */
-    font-family: 'Courier New', Courier, monospace;
-    padding: 50px;
+    background-color: #0d1117; /* Fondo oscuro de GitHub */
+    color: #00ff41; /* Verde neón clásico */
+    font-family: 'Fira Code', 'Courier New', monospace;
+    line-height: 1.6;
+    padding: 20px;
 }
-a { color: #58a6ff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+
+h1::before {
+    content: "> "; /* Añade el prompt de terminal antes del título */
+}
+
+.card {
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #161b22;
+}
